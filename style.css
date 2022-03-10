@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+body
+{
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+	background: radial-gradient(#777,rgb(255, 255, 255));
+    transition: background 0.2s linear;
+
+}
+.navigation
+{
+	background-color: rgba(5, 5, 5, 0.37);
+	position: fixed;
+	right: 5%; 
+    top: 5%; 
+	width: 280px;
+	height: 70px;
+	border-radius: 10px;
+	float: right;
+	z-index: 10;
+}
+.navigation ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+}
+.navigation ul li
+{
+	position: relative;
+	list-style: none;
+	width: 70px;
+	height: 70px;
+	z-index: 1;
+}
+.navigation ul li a
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	color: #333;
+	font-weight: 500;
+}
+.navigation ul li a .icon
+{
+	position: relative;
+	display: block;
+	line-height: 75px;
+	text-align: center;
+	transition: 0.5s;
+}
+.navigation ul li.active a .icon
+{
+	color: #fff;
+}
+.navigation ul li a .icon 
+{
+	font-size: 30px;
+}
+.navigation ul li.active a .icon 
+{
+	font-size: 20px;
+	transform: translateY(-6px);
+}
+.navigation ul li a .text 
+{
+	position: absolute;
+	font-size: 12px;
+	color: #fff;
+	bottom: 20px;
+	font-weight: 400;
+	transition: 0.25s;
+	transform: scale(0);
+	text-transform: uppercase;
+} 
+.navigation ul li.active a .text 
+{
+	transform: scale(1);
+}
+.navigation ul .indicator
+{
+	position: absolute;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 10px;
+	transition: 0.5s;
+	background: #333;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+	transform: translateX(calc(70px * 0));
+	background: #2f2bfc;
+	box-shadow: 0 15px 25px #2f2bfc55;
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+	transform: translateX(calc(70px * 1));
+	background: #5d62fb;
+	box-shadow: 0 15px 25px #5d62fb55;
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+	transform: translateX(calc(70px * 2));
+	background: #3a90f1;
+	box-shadow: 0 15px 25px #3a90f155;
+}
+.navigation ul li:nth-child(4).active ~ .indicator
+{
+	transform: translateX(calc(70px * 3));
+	background: #0fbcf9;
+	box-shadow: 0 15px 25px #0fbcf955;
+}
+.navigation ul li:nth-child(5).active ~ .indicator
+{
+	transform: translateX(calc(70px * 4));
+	background: #4df13e;
+	box-shadow: 0 15px 25px #4df13e55;
+}
+
+/* ------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.card
+{
+  position: relative;
+  float:right;
+  width: 340px;
+  height: 450px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+}
+.circle
+{
+  position: absolute;
+  top: -190px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  clip-path: circle();
+  background: #2447e7;
+}
+.circle::before
+{
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 20px rgba(58, 114, 236, 0.5);
+  z-index: 10000;
+  pointer-events: none;
+}
+.imgBx
+{
+  position: absolute;
+  width: 340px;
+  height: 310px;
+  background: #ff0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 1000;
+}
+.imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  transform-origin: top;
+}
+.imgBx:hover img
+{
+  transform: scale(1.5);
+}
+.content
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+  padding: 20px 30px;
+}
+.fa-linkedin
+{
+  background: #0e76a8 ;
+  padding: 2px 4px;
+  color: #fff;
+  border-radius: 2px;
+}
+h3
+{
+  margin: 7px 0 2px;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #333;
+}
+.text
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text h4
+{
+  font-weight: 500;
+  color: #2447e7;
+}
+.text a .fa 
+{
+  color: #2447e7;
+}
+
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+	
+}
+.container:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    transform: skewX(-15deg);
+    pointer-events: none;
+}
+h2
+{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.container .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col
+{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+    transition: 0.5s;
+}
+.container .row100 .inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.container .row100 .inputBox .text
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+.container .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .inputBox textarea
+{
+    height: 100%;
+    resize: none;
+}
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+input[type="submit"]
+{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.navdiv{
+	padding: 2% 5% 5% 5%;
+	
+}
+.header{
+    height: 100vh;
+	width: 100%;
+	background-image: url('header2.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+.headerdiv{
+    
+	justify-content: space-evenly;
+	padding-right: 20%;
+}
+.headerText{
+	text-shadow: 2px 2px #ffffff;
+	padding-left: 26rem;
+	font-size: 7rem;
+	display: flex;
+	float: left;
+}
+
+@media (max-width: 767px)
+{
+    section::before
+    {
+        transform: translate(-200px,-180px);
+    }
+    section::after
+    {
+        transform: translate(220px,180px);
+    }
+    .container
+    {
+        padding: 20px;
+    }
+    h2
+    {
+        font-size: 28px;
+    }
+}
+
+/* Testimonial Section */
+
+#testimonials {
+    padding: 5%;
+  }
+.testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+.testimonial-image {
+    width: 60%;
+    border-radius: 5%;
+    margin: 20px;
+  }
+  /* Sections */
+
+.colored-section {
+    text-align: center;
+  }
+#contact{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+#positioning{
+    margin: 10% 5%;
+}
+#about{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.footer{
+    text-align: center;
+width: 80%;
+margin-bottom: 30px;
+
+}
