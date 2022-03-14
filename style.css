@@ -407,6 +407,7 @@ input[type="submit"]
 	font-size: 7rem;
 	display: flex;
 	float: left;
+	color: blue;
 }
 
 @media (max-width: 767px)
